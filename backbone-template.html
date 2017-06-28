@@ -37,6 +37,13 @@
         completed: false
       }
     });
+
+    app.TodoList = Backbone.Collection.extend({
+      model: app.Todo,
+      localStorage: new Store("backend-todo")
+    });
+
+    app.todoList = new app.TodoList();
   </script>
 
 </body>
